@@ -20,12 +20,51 @@
   },
   "footer": {
     "rights": "All rights reserved",
-    "tagline": "Breeding extraordinary Arabians that inspire the world"
+    "tagline": "Breeding extraordinary Arabians that inspire the world",
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "horses": "Our Horses",
+      "cookies": "Cookies"
+    },
+    "copyright": "\u00a9 {year} Secret Arabians. All Rights Reserved.",
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram"
+    }
   },
   "home": {
     "hero": {
       "title": "Secret Arabians",
-      "subtitle": "Breeding extraordinary Arabians that inspire the world"
+      "subtitle": "Breeding extraordinary Arabians that inspire the world",
+      "welcome": "Welcome to",
+      "tagline": "A JOURNEY DRIVEN BY PASSION, SHAPED BY LOVE, AND BUILT ON A DREAM."
+    },
+    "testimonial": {
+      "quote": "We believe that truly exceptional horses are shaped by love and uncompromising standards. Every detail matters, every decision counts, and nothing is left to chance. Our eye for perfection and unwavering dedication shines through in every horse we raise."
+    },
+    "dream": {
+      "title": "A Dream We Share With You",
+      "body": "What started as a dream has become our life\u2019s passion. At Secret Arabians, we breed Arabian horses that are truly exceptional. Our deep love for the breed and relentless pursuit of excellence drive us to continuously learn and evolve. Each generation brings us closer to our vision of breeding extraordinary horses that inspire the world and leave a timeless legacy."
+    },
+    "pillars": {
+      "excellence": {
+        "title": "Pursuit of Excellence",
+        "body": "We refuse to settle for ordinary. Only the finest bloodlines are chosen as we dedicate ourselves to raising horses that stand apart in beauty, presence, and character."
+      },
+      "care": {
+        "title": "The Finest Care",
+        "body": "Our horses receive the highest standard of care, comfort, and attention at all times. We believe that extraordinary horses flourish with devoted care, love, and a life filled with happiness."
+      },
+      "learning": {
+        "title": "A Lifetime of Learning",
+        "body": "We continuously refine our approach, embrace new insights, and challenge ourselves to grow. Every experience shapes us into better breeders and brings us closer to our vision."
+      }
+    },
+    "cta": {
+      "title": "The Heart Of Our Dream",
+      "body": "Ready to meet our horses? Each one exceptional, each one raised to inspire. Get to know them and discover what makes them special.",
+      "button": "Discover Our Horses"
     }
   },
   "metadata": {
