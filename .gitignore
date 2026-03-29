@@ -40,6 +40,10 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# brand guidelines (confidential)
+*.pdf
+Brand guidelines SA.pdf
+
 # agent scratchpads
 .scratchpad.md
 
