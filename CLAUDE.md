@@ -1,4 +1,4 @@
-# CLAUDE.md — {PROJECT_NAME}
+# CLAUDE.md — Secret Arabians
 
 This file provides guidance to Claude Code when working with code in this repository.
 
@@ -33,141 +33,151 @@ At the START of EVERY task, BEFORE writing code:
 Read SKILLS.md → Fix with TDD → Quality gates → Commit
 ```
 
-<!-- ============================================================
-     SETUP: Replace all {PLACEHOLDER} values with your project's
-     specifics. Claude can auto-detect most of these by scanning
-     the codebase.
-     ============================================================ -->
-
 ## Brand Guidelines
 
-<!-- SETUP: Replace with your project's brand identity. Delete if N/A. -->
-
-The full brand guidelines are in `{BRAND_GUIDELINES_FILE}` (root of repo). All development MUST follow these brand rules:
+The full brand guidelines are in `Brand guidelines SA.pdf` (root of repo). All development MUST follow these brand rules:
 
 ### Brand Identity
-**{PROJECT_NAME}** is a **{BRAND_DESCRIPTION}**. Core values: **{VALUE_1}, {VALUE_2}, {VALUE_3}**.
+**Secret Arabians** is a **premium Arabian horse breeding programme dedicated to raising Arabians of extraordinary quality**. Core values: **Love, Excellence, Inspiration, Quality, Dedication**.
 
 ### Voice & Tone
-{TONE_ATTRIBUTES}. All user-facing copy must align with this tone.
+Inspirational, Warm, Personal, Elegant, Passionate, Authentic, Timeless. All user-facing copy must align with this tone.
 
 ### Official Color Palette
 
 | Name | Hex | CSS Alias | Usage |
 |---|---|---|---|
-| {Primary} | `{HEX}` | `{alias}` | Primary elements |
-| {Secondary} | `{HEX}` | `{alias}` | Body text |
-| {Accent} | `{HEX}` | `{alias}` | Accent elements |
-| {Background} | `{HEX}` | `{alias}` | Backgrounds |
+| Warm White | `#FAF9F7` | `sa-warm-white` | Page backgrounds |
+| Sand Linen | `#E8E3D9` | `sa-sand` | Secondary backgrounds, borders |
+| Rose Brown | `#C6A692` | `sa-rose` | Accent elements, soft highlights |
+| Muted Gold | `#B9A87F` | `sa-gold` | Accent CTAs, ring/focus |
+| Warm Brown | `#9A7B5B` | `sa-warm-brown` | Muted text, secondary elements |
+| Middle Brown | `#5C4A32` | `sa-brown` | Primary buttons, headings |
+| Dark Brown | `#3D2F1E` | `sa-dark` | Body text, primary foreground |
 
-All extended UI colors are defined in `{COLOR_CONFIG_FILE}`. Do NOT introduce colors outside the palette without approval.
+All extended UI colors are defined in `src/app/globals.css`. Do NOT introduce colors outside the palette without approval.
 
 ### Logo Rules
-- **NEVER** alter, distort, or modify the logo
-- Use in primary colors or monochrome only
+- **NEVER** alter, distort, or modify the logo (SA monogram)
+- Use in brand colors (gold + brown) or monochrome only
 - Always on clean backgrounds with sufficient contrast
 
 ### Typography
 
 | Role | Font | CSS Class | Usage |
 |---|---|---|---|
-| Headings | {Font} | `{class}` | Page/section headings |
-| Body/UI | {Font} | `{class}` | All UI text |
+| Display/Titles | Cinzel | `font-display` | Page titles, branding, logo text |
+| Headings/Quotes | Cormorant Garamond | `font-serif` | Section headings, elegant quotes |
+| Body/UI | Lato | `font-sans` | All body text, UI elements, labels |
+| Arabic | Noto Sans Arabic | `font-noto-arabic` | Arabic locale text |
+| Chinese | Noto Sans SC | `font-noto-sc` | Chinese locale text |
 
 ## Project Overview
 
-**{PROJECT_NAME}** is built with **{FRAMEWORK}** and **{LANGUAGE}** ({STRICT_MODE}). {RENDERING_MODE_DESCRIPTION}.
+**Secret Arabians** is built with **Next.js 16** and **TypeScript** (strict mode). Static export for deployment — no SSR, no API routes.
 
 ## Commands
 
 ```bash
-{DEV_COMMAND}            # Start dev server
-{BUILD_COMMAND}          # Production build
-{LINT_COMMAND}           # Linting
-{FORMAT_COMMAND}         # Formatting
-{TEST_COMMAND}           # Run tests
-{COMMIT_COMMAND}         # Commit (if using commitizen etc.)
+npm run dev            # Start dev server (Turbopack)
+npm run build          # Production build (static export)
+npm run lint           # Linting (0 errors required)
+npm run format         # Prettier formatting
+npm run typecheck      # TypeScript type checking
+npm run test           # Run tests
+npm run commit         # Commitizen conventional commit
+npm run clean          # Clear build artifacts
 ```
 
 ## Architecture
 
-### Routing ({ROUTING})
-{ROUTING_DESCRIPTION}
+### Routing (App Router + next-intl)
+File-based App Router with locale prefix. All pages under `src/app/[locale]/`.
 
 ```
-{ROUTE_STRUCTURE}
+src/app/
+├── layout.tsx                    ← Root layout (minimal, passes to locale)
+├── page.tsx                      ← Root redirect → /en
+├── [locale]/
+│   ├── layout.tsx                ← Locale layout (fonts, providers, dir)
+│   ├── page.tsx                  ← Home page
+│   ├── horses/                   ← Horse pages
+│   ├── about/                    ← About page
+│   ├── gallery/                  ← Gallery
+│   └── contact/                  ← Contact page
 ```
 
-### Authentication ({AUTH})
-{AUTH_DESCRIPTION}
+### Authentication (None — static site)
+No authentication currently. Will add Supabase Auth when backend is needed.
 
-### API Layer ({API_LAYER})
-{API_DESCRIPTION}
+### API Layer (None — static export)
+No API routes. Static data or future external API via `fetch`.
 
-### UI Components ({COMPONENT_LIBRARY})
-{COMPONENT_DESCRIPTION}
+### UI Components (shadcn/ui)
+shadcn/ui with Radix UI primitives, styled with Tailwind. Components in `src/components/ui/`.
 
 ### Forms
-{FORM_HANDLING_DESCRIPTION}
+react-hook-form + Zod for validation.
 
 ### Data Tables
-{TABLE_HANDLING_DESCRIPTION}
+TanStack React Table (add when needed).
 
 ### Database
-{DATABASE_DESCRIPTION}
+None currently. Future: Supabase (PostgreSQL + RLS).
 
-### State Management ({STATE_MANAGEMENT})
-{STATE_DESCRIPTION}
+### State Management (React hooks)
+React hooks only (useState, useMemo, useContext). No Redux/Zustand. Props drilling is acceptable.
 
-### Internationalization ({I18N_LIBRARY})
-<!-- SETUP: Delete this section if no i18n -->
-- Translation files: `{TRANSLATION_PATH}`
-- Locales: {LOCALES}
-- Navigation: `{NAV_IMPORT}` (instead of framework default)
-- RTL support: {RTL_SUPPORT}
+### Internationalization (next-intl)
+- Translation files: `src/messages/{locale}.json`
+- Locales: en, ar, zh
+- Navigation: `Link` from `@/i18n/navigation` (instead of `next/link`)
+- RTL support: Yes (Arabic)
 - CSS logical properties: `ms-`/`me-`/`ps-`/`pe-` instead of `ml-`/`mr-`/`pl-`/`pr-`
 
 ## Critical Rules
 
 - **NEVER remove, rename, or restructure existing UI elements** unless explicitly asked
 - **Always cross-check screenshots and specs** before implementing
-- {ADD_PROJECT_SPECIFIC_RULES}
+- **All user-facing text via i18n** — never hardcode strings
+- **Use `sa-*` Tailwind classes** — never hardcode hex values
+- **Page background always `bg-sa-warm-white`** — never plain white
+- **Cards: `bg-white rounded-2xl`** with subtle shadow
 
 ## Key Conventions
 
-- **Path alias**: `{PATH_ALIAS}` maps to project root
-- **Utility function**: `{UTIL_FUNCTION}` for conditional classNames
-- **Client components**: `{CLIENT_DIRECTIVE}` when using hooks or browser APIs
-- **Static export**: {STATIC_EXPORT_RULES}
-- **Feature-based folders**: `{COMPONENT_STRUCTURE}`
-- **i18n**: ALL user-facing text via `{TRANSLATION_FUNCTION}()`. Never hardcode strings.
+- **Path alias**: `@/*` maps to `./src/*`
+- **Utility function**: `cn()` from `@/lib/utils` for conditional classNames
+- **Client components**: `'use client'` when using hooks or browser APIs
+- **Static export**: No `getServerSideProps`, no API routes, no middleware in production
+- **Feature-based folders**: `src/components/{feature}/`
+- **i18n**: ALL user-facing text via `useTranslations()`. Never hardcode strings.
 
 ## Naming Conventions
 
 ```
-Components:     PascalCase      UserProfile.tsx
+Components:     PascalCase      HorseCard.tsx
 Hooks:          camelCase       useAuth.ts (always 'use' prefix)
 Utils:          camelCase       formatDate.ts
-Types:          PascalCase      UserProfile.types.ts
-Constants:      SCREAMING_CASE  MAX_RETRIES
+Types:          PascalCase      Horse.types.ts
+Constants:      SCREAMING_CASE  MAX_GALLERY_ITEMS
 ```
 
 ## TypeScript Rules
-<!-- SETUP: Delete if not using TypeScript -->
 - Never use `any` — use `unknown` and narrow
 - Never use `@ts-ignore` without explanatory comment
 - Explicit return types on exported functions
 
 ## Git Workflow
 
-Branch naming: `{BRANCH_PREFIX}` prefixes. {COMMIT_CONVENTION}.
+Branch naming: `feature/` / `fix/` prefixes. Conventional Commits enforced via Commitizen + commitlint.
 
 ## Important Files
 
 - `specs/` — Feature specifications (read before implementing)
 - `AGENTS.md` — Build commands and quality gates
 - `SKILLS.md` — Technical patterns and tools
-- `{MOCK_DATA_PATH}` — Mock/seed data
+- `Brand guidelines SA.pdf` — Official brand guidelines
 
 ## Plan Lifecycle
 

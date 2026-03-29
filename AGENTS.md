@@ -27,14 +27,13 @@ Spec → Plan → Review Plan → Build → Review → Ship
 ```
 
 ## i18n Rules (MANDATORY)
-<!-- SETUP: Delete if no i18n -->
 
 **Planner:** Each subplan includes "Translation keys" section
 
 **Builder:**
-- Use `{TRANSLATION_FUNCTION}('{namespace}')` instead of hardcoded strings
-- Add keys to `{TRANSLATION_PATH}` under appropriate namespace
-- Use `{NAV_IMPORT}` for internal links
+- Use `useTranslations('{namespace}')` instead of hardcoded strings
+- Add keys to `src/messages/{locale}.json` under appropriate namespace
+- Use `Link` from `@/i18n/navigation` for internal links
 - DO NOT translate: database values (names, IDs, locations)
 
 **Reviewer:**
@@ -82,15 +81,15 @@ Created: {date}
 All gates must PASS before committing:
 
 ```bash
-{LINT_COMMAND}           # 0 errors
-{TYPECHECK_COMMAND}      # 0 type errors (if applicable)
-{TEST_COMMAND}           # All tests pass
-{BUILD_COMMAND}          # Build succeeds
+npm run lint           # 0 errors
+npm run typecheck      # 0 type errors
+npm run test           # All tests pass
+npm run build          # Build succeeds
 ```
 
 **Pre-commit checklist:**
 ```bash
-{LINT_COMMAND} && {TEST_COMMAND} && {BUILD_COMMAND}
+npm run lint && npm run typecheck && npm run test && npm run build
 ```
 
 ## Code Review with Fresh Context
@@ -101,12 +100,9 @@ claude -p "Review files changed in last 5 commits for: dead code, over-engineeri
 
 ## Available Agents
 
-<!-- SETUP: List your configured subagents here -->
-
 | Agent | Purpose |
 |---|---|
 | planner | Creates plans from specs/requirements |
 | builder | Implements plans with TDD |
 | reviewer | Reviews code with fresh context |
 | code-simplifier | Reduces complexity, removes dead code |
-| {CUSTOM_AGENT} | {description} |

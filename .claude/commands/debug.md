@@ -12,5 +12,5 @@ $ARGUMENTS
 4. Isolate: find exact file and line
 5. Root cause analysis (not symptoms)
 6. Fix the issue
-7. Run quality gates: `{LINT_COMMAND} && {BUILD_COMMAND}`
+7. Run quality gates: `npm run lint && npm run build`
 8. Commit: `fix({scope}): {description}`

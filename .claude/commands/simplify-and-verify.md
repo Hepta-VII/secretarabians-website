@@ -17,9 +17,9 @@ Run code simplification and verification on recently modified files.
 
 3. **Run quality gates**
    ```bash
-   {LINT_COMMAND}
-   {TYPECHECK_COMMAND}
-   {TEST_COMMAND}
+   npm run lint
+   npm run typecheck
+   npm run test
    ```
 
 4. **Verify UI** (if applicable)

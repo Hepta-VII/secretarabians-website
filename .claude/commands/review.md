@@ -37,10 +37,10 @@ Check for "slop patterns" in all modified files:
 ### Step 3: Run Quality Checks
 
 ```bash
-{LINT_COMMAND}
-{TYPECHECK_COMMAND}
-{TEST_COMMAND}
-{BUILD_COMMAND}
+npm run lint
+npm run typecheck
+npm run test
+npm run build
 ```
 
 ### Step 4: Run Code-Simplifier

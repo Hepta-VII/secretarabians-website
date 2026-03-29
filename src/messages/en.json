@@ -1,0 +1,35 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "back": "Back",
+    "next": "Next",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "search": "Search",
+    "readMore": "Read more",
+    "viewAll": "View all"
+  },
+  "nav": {
+    "home": "Home",
+    "horses": "Our Horses",
+    "about": "About Us",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "tagline": "Breeding extraordinary Arabians that inspire the world"
+  },
+  "home": {
+    "hero": {
+      "title": "Secret Arabians",
+      "subtitle": "Breeding extraordinary Arabians that inspire the world"
+    }
+  },
+  "metadata": {
+    "title": "Secret Arabians",
+    "description": "Breeding extraordinary Arabians that inspire the world. A premium Arabian horse breeding programme dedicated to raising Arabians of extraordinary quality."
+  }
+}

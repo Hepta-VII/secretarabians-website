@@ -1,0 +1,35 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "出了些问题",
+    "back": "返回",
+    "next": "下一步",
+    "save": "保存",
+    "cancel": "取消",
+    "close": "关闭",
+    "search": "搜索",
+    "readMore": "阅读更多",
+    "viewAll": "查看全部"
+  },
+  "nav": {
+    "home": "首页",
+    "horses": "我们的马匹",
+    "about": "关于我们",
+    "gallery": "画廊",
+    "contact": "联系我们"
+  },
+  "footer": {
+    "rights": "版权所有",
+    "tagline": "培育激励世界的非凡阿拉伯马"
+  },
+  "home": {
+    "hero": {
+      "title": "Secret Arabians",
+      "subtitle": "培育激励世界的非凡阿拉伯马"
+    }
+  },
+  "metadata": {
+    "title": "Secret Arabians",
+    "description": "培育激励世界的非凡阿拉伯马。致力于培育品质卓越的阿拉伯马的高端育马计划。"
+  }
+}

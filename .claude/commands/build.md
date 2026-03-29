@@ -29,13 +29,13 @@ FOR EACH subplan (SUB-001, SUB-002, ...):
 2. TDD: Write test for expected behavior FIRST
 3. Implement the changes (follow the plan exactly)
 4. Quality gates:
-   - Lint: {LINT_COMMAND}
-   - Type check: {TYPECHECK_COMMAND}
-   - Tests: {TEST_COMMAND}
+   - Lint: npm run lint
+   - Type check: npm run typecheck
+   - Tests: npm run test
 5. Verification: Follow the subplan's verification checklist
 6. Code-simplifier: Run on modified files
 7. COMMIT with the template from the subplan:
-   {COMMIT_CONVENTION} format
+   Conventional Commits format
    Reference: Subplan SUB-NNN, Feature {feature-name}
 8. Update status in SUB-NNN.md → DONE (with commit hash)
 ```

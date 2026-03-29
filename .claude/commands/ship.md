@@ -5,7 +5,7 @@ Push code and create a pull request.
 Before shipping, verify ALL quality gates pass:
 
 ```bash
-{LINT_COMMAND} && {TEST_COMMAND} && {BUILD_COMMAND}
+npm run lint && npm run test && npm run build
 ```
 
 **DO NOT ship if any gate fails.**
@@ -14,10 +14,10 @@ Before shipping, verify ALL quality gates pass:
 
 ### Step 1: Quality Gates
 ```bash
-{LINT_COMMAND}
-{TYPECHECK_COMMAND}
-{TEST_COMMAND}
-{BUILD_COMMAND}
+npm run lint
+npm run typecheck
+npm run test
+npm run build
 ```
 
 ### Step 2: Push

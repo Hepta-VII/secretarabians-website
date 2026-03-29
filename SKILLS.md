@@ -2,55 +2,79 @@
 
 ## Overview
 
-This file documents the technical patterns, tools, and common pitfalls for the **{PROJECT_NAME}** codebase. Every agent MUST read this before writing code.
-
----
-
-## Database Skills
-<!-- SETUP: Replace with your database patterns. Delete if N/A. -->
-
-### {DATABASE_NAME} Patterns
-{Database query patterns, ORM usage, connection setup}
-
-### Schema / Migrations
-{How to create and manage schema changes}
-
-### Security / Access Control
-{RLS policies, permission patterns, auth integration}
+This file documents the technical patterns, tools, and common pitfalls for the **Secret Arabians** codebase. Every agent MUST read this before writing code.
 
 ---
 
 ## Framework Skills
-<!-- SETUP: Replace with your framework-specific patterns. -->
 
-### {FRAMEWORK} Patterns
-{Framework-specific conventions, gotchas, best practices}
+### Next.js 16 Patterns
+- **Static export**: `output: 'export'` in next.config.ts — no SSR, no API routes, no middleware at runtime
+- **Server components** are the default — add `'use client'` only when using hooks or browser APIs
+- **App Router**: File-based routing under `src/app/[locale]/`
+- **Image optimization**: Use `next/image` with explicit width/height for static export
+- **Fonts**: Loaded via `next/font/google` in `src/app/fonts.ts`
 
 ### Component Patterns
-{How components are structured, state management, props patterns}
+- **Small components** (< 300 lines): Single file, named export
+- **Large components** (> 300 lines): Split into directory with `index.tsx` barrel export
+- **Page-local components**: `_components/` subdirectory (underscore prevents route)
+- **State stays in parent** — props drilling, no unnecessary context providers
+- **`cn()` utility** for conditional Tailwind classes: `cn('base', condition && 'conditional')`
 
 ### Performance
-{Performance best practices, lazy loading, memoization patterns}
+- Lazy load heavy components with `dynamic(() => import(...))` or `React.lazy()`
+- Use `next/image` for all images (automatic optimization)
+- Minimize `'use client'` — keep data fetching in server components
 
 ---
 
 ## i18n Skills
-<!-- SETUP: Delete if no i18n -->
 
 ### Translation Keys
-- Add to: `{TRANSLATION_PATH}`
-- Function: `{TRANSLATION_FUNCTION}('{namespace}')`
-- Navigation: `{NAV_IMPORT}`
+- Add to: `src/messages/{locale}.json`
+- Function: `useTranslations('{namespace}')`
+- Navigation: `Link` from `@/i18n/navigation`
 
 ### File Structure
 ```
-{TRANSLATION_FILE_STRUCTURE}
+src/messages/
+├── en.json     ← English (source of truth)
+├── ar.json     ← Arabic (RTL)
+└── zh.json     ← Chinese Simplified
 ```
 
 ### Adding New Keys
-1. Add key to primary locale file
-2. Use in component via translation function
-3. Other locales: add matching key or leave for translators
+1. Add key to `en.json` under appropriate namespace
+2. Use in component via `useTranslations('namespace')`
+3. Add matching key to `ar.json` and `zh.json`
+
+### RTL Support (Arabic)
+- Use CSS logical properties: `ms-`, `me-`, `ps-`, `pe-`, `text-start`, `text-end`
+- Exceptions: centering (`left-[50%]`), absolute positioning for animations
+- Layout automatically flips via `dir="rtl"` on `<html>`
+
+---
+
+## Theme & Design Skills
+
+### Colors
+- **Tailwind**: Use `sa-*` classes (e.g., `bg-sa-warm-white`, `text-sa-dark`, `border-sa-sand`)
+- **JS/SVG**: Import from `@/lib/theme/colors` (e.g., `SA_COLORS.gold`)
+- **NEVER** hardcode hex values in templates or inline styles
+
+### Typography
+- **Display text** (hero titles): `font-display` (Cinzel)
+- **Section headings**: `font-serif` (Cormorant Garamond)
+- **Body text**: `font-sans` (Lato, default)
+- **Weight**: Body text uses `font-light` (300), headings use `font-semibold` (600)
+
+### Design Rules
+- Page background: always `bg-sa-warm-white` (never plain white or grey)
+- Cards: `bg-white rounded-2xl shadow-sm`
+- Primary buttons: `bg-sa-brown hover:bg-sa-dark text-sa-warm-white rounded-full`
+- Accent buttons: `bg-sa-gold hover:bg-sa-gold-light text-sa-dark rounded-full`
+- Focus rings: `ring-sa-gold`
 
 ---
 
@@ -64,27 +88,28 @@ Run code-simplifier on {list of modified files}
 
 ### Quality Gates
 ```bash
-{LINT_COMMAND}           # Linting
-{TYPECHECK_COMMAND}      # Type checking
-{TEST_COMMAND}           # Tests
-{BUILD_COMMAND}          # Build
+npm run lint           # Linting
+npm run typecheck      # Type checking
+npm run test           # Tests
+npm run build          # Build
 ```
 
 ---
 
 ## Common Pitfalls
 
-<!-- SETUP: Add your project-specific pitfalls as you discover them. -->
-
 | Pitfall | Solution |
 |---|---|
-| Hardcoded strings in components | Use `{TRANSLATION_FUNCTION}()` always |
+| Hardcoded strings in components | Use `useTranslations()` always |
 | Physical CSS properties (ml, mr, pl, pr) | Use logical properties (ms, me, ps, pe) for RTL |
-| Using wrong Link import | Use `{NAV_IMPORT}` |
-| Missing client directive | Add `'{CLIENT_DIRECTIVE}'` when using hooks |
-| Hardcoded color values | Use CSS aliases from config |
+| Using wrong Link import | Use `Link` from `@/i18n/navigation` |
+| Missing client directive | Add `'use client'` when using hooks |
+| Hardcoded color values | Use `sa-*` Tailwind classes |
+| White page background | Use `bg-sa-warm-white` |
 | Missing error boundaries | Add error handling for async operations |
 | Over-engineering | Keep it simple — no premature abstractions |
+| Using `next/link` directly | Use `Link` from `@/i18n/navigation` |
+| API routes with static export | Not supported — use external APIs or static data |
 
 ---
 

@@ -10,7 +10,7 @@ Follow these steps:
 4. **Plan** — Think about the solution before coding
 5. **Implement** — Make the necessary changes
 6. **Test** — Write and run tests to verify the fix
-7. **Quality** — Run quality gates: `{LINT_COMMAND} && {TEST_COMMAND}`
+7. **Quality** — Run quality gates: `npm run lint && npm run test`
 8. **Commit** — Create a descriptive commit message referencing the issue
 9. **PR** — Push and create a PR with `gh pr create`
 

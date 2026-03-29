@@ -37,7 +37,7 @@ You are doing TDD. This means:
 
 4. **Run Tests — They Should FAIL**
    ```bash
-   {TEST_COMMAND} -- {target}.test.*
+   npm run test -- {target}.test.*
    ```
    Confirm they fail because implementation doesn't exist yet.
 
