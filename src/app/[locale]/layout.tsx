@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { FONT_VARIABLES } from "@/app/fonts";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 type Props = {
   children: React.ReactNode;
@@ -38,10 +40,12 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} dir={dir} className={`${FONT_VARIABLES} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-sa-warm-white text-sa-text font-sans">
+      <body className="bg-sa-warm-white text-sa-text flex min-h-full flex-col font-sans">
         <NextIntlClientProvider locale={locale} messages={messages}>
           <TooltipProvider>
+            <Header />
             {children}
+            <Footer />
           </TooltipProvider>
         </NextIntlClientProvider>
       </body>
