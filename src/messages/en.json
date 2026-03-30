@@ -67,6 +67,30 @@
       "button": "Discover Our Horses"
     }
   },
+  "about": {
+    "hero": {
+      "title": "OUR STORY",
+      "tagline": "FROM A CHILDHOOD DREAM TO THE LIFE WE LIVE TODAY."
+    },
+    "paradise": {
+      "title": "A Little Girl\u2019s Paradise",
+      "body": "Long before Secret Arabians existed, there was a little girl in her grandparents\u2019 stables who could not stay away from the horses. To me, it was the most beautiful place in the world, my own little paradise. It was there that I first met the Arabian horse, a breed that would change my life forever. I fell in love with their elegance, their spirit, and their way of connecting with you on a deeper level. That love has never left me, and over the years it grew into a lifelong passion that eventually became the heart of Secret Arabians."
+    },
+    "meant": {
+      "title": "Meant To Be",
+      "body": "In 2023, years of dreaming finally turned into reality. Rector\u2019s Calista, a horse I had known and admired for years, unexpectedly became mine. As our first broodmare, she was the spark that brought Secret Arabians to life. Our story as breeders started with her arrival, and she will forever hold a special place in our hearts."
+    },
+    "dreaming": {
+      "title": "Inspired To Keep Dreaming",
+      "body": "Looking ahead fills us with excitement. I carried this dream with me my whole life, never daring to imagine it would become real so soon. Yet here we are, with so many new dreams waiting to unfold. New horses, new milestones, new chapters waiting to be written. When I think of the little girl who once could not stay away from her grandparents\u2019 horses, I know she would be proud of what we are building. The future holds endless possibilities, and we are ready to embrace every single one."
+    },
+    "testimonial": {
+      "quote": "They say some dreams are too big to come true. I used to believe them. Now I wake up every day surrounded by everything I ever wished for."
+    },
+    "moments": {
+      "title": "MOMENTS"
+    }
+  },
   "metadata": {
     "title": "Secret Arabians",
     "description": "Breeding extraordinary Arabians that inspire the world. A premium Arabian horse breeding programme dedicated to raising Arabians of extraordinary quality."
