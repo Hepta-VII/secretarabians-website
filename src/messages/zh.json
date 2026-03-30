@@ -91,6 +91,31 @@
       "title": "精彩瞬间"
     }
   },
+  "horses": {
+    "header": {
+      "subtitle": "我们梦想的核心",
+      "title": "我们的马匹"
+    },
+    "cta": {
+      "title": "对我们的马匹感兴趣？",
+      "body": "我们热爱分享我们的热情。如果您想了解更多关于我们马匹的信息或有任何问题，我们很乐意听到您的声音。",
+      "button": "联系我们"
+    },
+    "success": {
+      "subtitle": "他们的旅程在继续",
+      "title": "成功故事"
+    },
+    "sex": {
+      "mare": "母马",
+      "stallion": "种马",
+      "gelding": "骟马"
+    },
+    "detail": {
+      "pedigree": "血统",
+      "sire": "父系",
+      "dam": "母系"
+    }
+  },
   "metadata": {
     "title": "Secret Arabians",
     "description": "\u57f9\u80b2\u6fc0\u52b1\u4e16\u754c\u7684\u975e\u51e1\u963f\u62c9\u4f2f\u9a6c\u3002\u81f4\u529b\u4e8e\u57f9\u80b2\u54c1\u8d28\u5353\u8d8a\u7684\u963f\u62c9\u4f2f\u9a6c\u7684\u9ad8\u7aef\u80b2\u9a6c\u8ba1\u5212\u3002"

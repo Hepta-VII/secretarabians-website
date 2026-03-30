@@ -91,6 +91,31 @@
       "title": "MOMENTS"
     }
   },
+  "horses": {
+    "header": {
+      "subtitle": "THE HEART OF OUR DREAM",
+      "title": "OUR HORSES"
+    },
+    "cta": {
+      "title": "Interested In Our Horses?",
+      "body": "We love sharing our passion. If you would like to know more about our horses or have any questions, we would be happy to hear from you.",
+      "button": "Get In Touch"
+    },
+    "success": {
+      "subtitle": "THEIR JOURNEY CONTINUES",
+      "title": "Success stories"
+    },
+    "sex": {
+      "mare": "Mare",
+      "stallion": "Stallion",
+      "gelding": "Gelding"
+    },
+    "detail": {
+      "pedigree": "Pedigree",
+      "sire": "Sire",
+      "dam": "Dam"
+    }
+  },
   "metadata": {
     "title": "Secret Arabians",
     "description": "Breeding extraordinary Arabians that inspire the world. A premium Arabian horse breeding programme dedicated to raising Arabians of extraordinary quality."
