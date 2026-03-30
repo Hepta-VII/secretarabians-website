@@ -51,58 +51,71 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 
   /* --- Secret Arabians Brand Colors --- */
-  --color-sa-warm-white: #FAF9F7;
-  --color-sa-sand: #E8E3D9;
-  --color-sa-rose: #C6A692;
-  --color-sa-gold: #B9A87F;
-  --color-sa-warm-brown: #9A7B5B;
-  --color-sa-brown: #5C4A32;
-  --color-sa-dark: #3D2F1E;
+  --color-sa-warm-white: #faf9f7;
+  --color-sa-sand: #e8e3d9;
+  --color-sa-rose: #c6a692;
+  --color-sa-gold: #b9a87f;
+  --color-sa-warm-brown: #9a7b5b;
+  --color-sa-brown: #5c4a32;
+  --color-sa-dark: #3d2f1e;
 
   /* --- Extended UI Colors --- */
-  --color-sa-sand-light: #F0ECE5;
-  --color-sa-rose-light: #D9C4B5;
-  --color-sa-rose-soft: #F0E5DE;
-  --color-sa-gold-light: #CFC0A0;
-  --color-sa-gold-soft: #EDE7D9;
-  --color-sa-brown-light: #7A6548;
-  --color-sa-text: #3D2F1E;
-  --color-sa-text-light: #7A6548;
+  --color-sa-sand-light: #f0ece5;
+  --color-sa-rose-light: #d9c4b5;
+  --color-sa-rose-soft: #f0e5de;
+  --color-sa-gold-light: #cfc0a0;
+  --color-sa-gold-soft: #ede7d9;
+  --color-sa-brown-light: #7a6548;
+  --color-sa-text: #3d2f1e;
+  --color-sa-text-light: #7a6548;
 }
 
 :root {
-  --background: #FAF9F7;
-  --foreground: #3D2F1E;
-  --card: #FFFFFF;
-  --card-foreground: #3D2F1E;
-  --popover: #FFFFFF;
-  --popover-foreground: #3D2F1E;
-  --primary: #5C4A32;
-  --primary-foreground: #FAF9F7;
-  --secondary: #E8E3D9;
-  --secondary-foreground: #3D2F1E;
-  --muted: #E8E3D9;
-  --muted-foreground: #9A7B5B;
-  --accent: #B9A87F;
-  --accent-foreground: #3D2F1E;
-  --destructive: #9F2B2E;
-  --border: #E8E3D9;
-  --input: #E8E3D9;
-  --ring: #B9A87F;
-  --chart-1: #5C4A32;
-  --chart-2: #B9A87F;
-  --chart-3: #C6A692;
-  --chart-4: #9A7B5B;
-  --chart-5: #3D2F1E;
+  --background: #faf9f7;
+  --foreground: #3d2f1e;
+  --card: #ffffff;
+  --card-foreground: #3d2f1e;
+  --popover: #ffffff;
+  --popover-foreground: #3d2f1e;
+  --primary: #5c4a32;
+  --primary-foreground: #faf9f7;
+  --secondary: #e8e3d9;
+  --secondary-foreground: #3d2f1e;
+  --muted: #e8e3d9;
+  --muted-foreground: #9a7b5b;
+  --accent: #b9a87f;
+  --accent-foreground: #3d2f1e;
+  --destructive: #9f2b2e;
+  --border: #e8e3d9;
+  --input: #e8e3d9;
+  --ring: #b9a87f;
+  --chart-1: #5c4a32;
+  --chart-2: #b9a87f;
+  --chart-3: #c6a692;
+  --chart-4: #9a7b5b;
+  --chart-5: #3d2f1e;
   --radius: 0.625rem;
-  --sidebar: #FAF9F7;
-  --sidebar-foreground: #3D2F1E;
-  --sidebar-primary: #5C4A32;
-  --sidebar-primary-foreground: #FAF9F7;
-  --sidebar-accent: #E8E3D9;
-  --sidebar-accent-foreground: #3D2F1E;
-  --sidebar-border: #E8E3D9;
-  --sidebar-ring: #B9A87F;
+  --sidebar: #faf9f7;
+  --sidebar-foreground: #3d2f1e;
+  --sidebar-primary: #5c4a32;
+  --sidebar-primary-foreground: #faf9f7;
+  --sidebar-accent: #e8e3d9;
+  --sidebar-accent-foreground: #3d2f1e;
+  --sidebar-border: #e8e3d9;
+  --sidebar-ring: #b9a87f;
+}
+
+@theme inline {
+  --animate-carousel: carousel 40s linear infinite;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @layer base {
@@ -115,7 +128,12 @@
   html {
     @apply font-sans;
   }
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-sa-dark;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-sa-dark font-serif;
   }
 }
