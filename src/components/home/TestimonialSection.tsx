@@ -31,7 +31,7 @@ export function TestimonialSection({
           &ldquo;
         </span>
         <blockquote className="max-w-[776px]">
-          <p className="text-sa-dark font-serif text-xl leading-[1.2] italic lg:text-[28px]">
+          <p className="text-sa-dark text-center font-serif text-xl leading-[1.2] italic lg:text-[28px]">
             {t(quoteKey)}
           </p>
         </blockquote>
