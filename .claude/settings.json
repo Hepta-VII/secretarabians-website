@@ -9,7 +9,11 @@
       "WebFetch",
       "Glob",
       "Grep",
-      "MultiTool"
+      "MultiTool",
+      "TodoWrite",
+      "Agent",
+      "NotebookEdit",
+      "AskUserQuestion"
     ]
   }
 }

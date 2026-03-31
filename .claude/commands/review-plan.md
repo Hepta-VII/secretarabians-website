@@ -10,11 +10,12 @@ $ARGUMENTS
 2. **AGENTS.md** — Build commands
 3. **SKILLS.md** — Patterns and pitfalls
 4. **PLANS/{feature}/MASTER.md** — The plan to review
-5. **All SUB-*.md files** in the plan folder
+5. **All SUB-\*.md files** in the plan folder
 
 ## Workflow
 
 ### Step 1: Load Plan
+
 ```
 Read PLANS/{feature}/MASTER.md
 Read ALL SUB-*.md files
@@ -24,6 +25,7 @@ Create PLANS/{feature}/.scratchpad.md for review notes
 ### Step 2: Verify Against Codebase
 
 For each subplan, check:
+
 - [ ] File paths exist (or parent directories exist for new files)
 - [ ] Referenced types/interfaces are correct
 - [ ] Import paths are valid
@@ -38,6 +40,7 @@ For each subplan, check:
 **DO NOT just report issues — FIX them directly in the .md files.**
 
 Common issues to check and fix:
+
 - Wrong type names or interfaces
 - Missing imports or wrong import paths
 - Hardcoded text instead of i18n keys

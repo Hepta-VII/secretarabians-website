@@ -3,8 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Secret Arabians",
-  description:
-    "Breeding extraordinary Arabians that inspire the world.",
+  description: "Breeding extraordinary Arabians that inspire the world.",
 };
 
 export default function RootLayout({

@@ -14,12 +14,14 @@ $ARGUMENTS
 ## Workflow
 
 ### Step 1: Initialize
+
 ```
 Create PLANS/{feature-name}/.scratchpad.md
 Note: initial findings, questions, constraints
 ```
 
 ### Step 2: Explore Codebase
+
 ```
 Search for existing components, types, patterns that can be reused.
 Understand the current architecture around the feature area.
@@ -44,21 +46,26 @@ PLANS/{feature-name}/
 # MASTER: {Feature Name}
 
 ## Feature
+
 {Brief description of what we're building}
 
 ## Subplans Overview
-| # | File | Objective | Status |
-|---|---|---|---|
-| 1 | SUB-001-{name}.md | {objective} | TODO |
-| 2 | SUB-002-{name}.md | {objective} | TODO |
+
+| #   | File              | Objective   | Status |
+| --- | ----------------- | ----------- | ------ |
+| 1   | SUB-001-{name}.md | {objective} | TODO   |
+| 2   | SUB-002-{name}.md | {objective} | TODO   |
 
 ## Folder Structure (new files)
+
 {Directory tree of files to create}
 
 ## Key Patterns to Follow
+
 {Reference existing files for patterns}
 
 ## Notes
+
 {Constraints, dependencies, open questions}
 ```
 
@@ -70,27 +77,35 @@ PLANS/{feature-name}/
 ## Status: TODO
 
 ## Objective
+
 {One atomic thing only}
 
 ## Files to Modify/Create
+
 {Exact paths}
 
 ## Changes
+
 {Detailed description with code blocks}
 
 ## Tests Required
+
 {What must be tested}
 
 ## Translation Keys
+
 {New i18n keys needed — if applicable}
 
 ## Verification Checklist
+
 - [ ] {Step-by-step verification}
 
 ## Code-Simplifier
+
 Run code-simplifier on {files modified}
 
 ## Commit Message Template
+
 {conventional commit format}
 ```
 

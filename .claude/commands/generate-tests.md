@@ -29,16 +29,20 @@ You are doing TDD. This means:
    - [ ] Loading states (if UI)
 
 3. **Use Existing Patterns**
+
    ```bash
    # Find existing test patterns
    find . -name "*.test.*" -o -name "*.spec.*" | head -5
    ```
+
    Follow the same style and fixtures.
 
 4. **Run Tests — They Should FAIL**
+
    ```bash
    npm run test -- {target}.test.*
    ```
+
    Confirm they fail because implementation doesn't exist yet.
 
 5. **Commit Tests**

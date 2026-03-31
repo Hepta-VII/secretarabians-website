@@ -14,6 +14,7 @@ $ARGUMENTS
 ## Workflow
 
 ### Step 1: Load Context
+
 ```
 Read BuiltPlans/{feature}/MASTER.md
 Read ALL SUB-*.md files (including commit hashes)
@@ -23,6 +24,7 @@ Create BuiltPlans/{feature}/.scratchpad.md for review notes
 ### Step 2: Code Review Checklist
 
 Check for "slop patterns" in all modified files:
+
 - [ ] **Dead code** — unused imports, variables, functions
 - [ ] **Over-engineering** — premature abstractions, unnecessary wrappers
 - [ ] **Copy-paste code** — duplicated logic that should be shared

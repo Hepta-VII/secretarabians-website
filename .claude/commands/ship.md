@@ -13,6 +13,7 @@ npm run lint && npm run test && npm run build
 ## Workflow
 
 ### Step 1: Quality Gates
+
 ```bash
 npm run lint
 npm run typecheck
@@ -21,12 +22,14 @@ npm run build
 ```
 
 ### Step 2: Push
+
 ```bash
 # Push with upstream tracking if not set
 git push -u origin $(git branch --show-current)
 ```
 
 ### Step 3: Create PR
+
 ```bash
 # Get recent feature commit for title
 TITLE=$(git log --oneline -1 --format="%s")

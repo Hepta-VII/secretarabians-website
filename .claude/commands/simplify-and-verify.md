@@ -3,6 +3,7 @@ Run code simplification and verification on recently modified files.
 ## Process
 
 1. **Identify modified files**
+
    ```bash
    git diff --name-only HEAD~5
    ```
@@ -16,6 +17,7 @@ Run code simplification and verification on recently modified files.
    - Remove over-engineering
 
 3. **Run quality gates**
+
    ```bash
    npm run lint
    npm run typecheck

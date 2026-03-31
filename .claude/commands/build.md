@@ -14,6 +14,7 @@ $ARGUMENTS
 ## Workflow
 
 ### Step 1: Initialize
+
 ```
 Read PLANS/{feature}/MASTER.md
 Read ALL SUB-*.md files to understand full scope

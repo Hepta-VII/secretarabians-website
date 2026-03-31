@@ -7,6 +7,7 @@ $ARGUMENTS
 ## Process
 
 1. **Fetch PR details**
+
    ```bash
    gh pr view $ARGUMENTS
    gh pr diff $ARGUMENTS
@@ -24,6 +25,7 @@ $ARGUMENTS
    - [ ] Performance — no obvious bottlenecks
 
 3. **Run Quality Checks**
+
    ```bash
    gh pr checkout $ARGUMENTS
    npm run lint

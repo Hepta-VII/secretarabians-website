@@ -13,6 +13,7 @@ $ARGUMENTS
 ## Workflow
 
 ### Step 1: Plan
+
 ```
 1. Read CLAUDE.md, AGENTS.md, SKILLS.md
 2. Explore codebase for relevant patterns
@@ -20,6 +21,7 @@ $ARGUMENTS
 ```
 
 ### Step 2: Build
+
 ```
 For each planned change:
 1. TDD: Write test first
@@ -28,6 +30,7 @@ For each planned change:
 ```
 
 ### Step 3: Verify
+
 ```
 1. Run quality gates: lint, type-check, test, build
 2. Run code-simplifier on modified files
@@ -35,6 +38,7 @@ For each planned change:
 ```
 
 ### Step 4: Commit
+
 ```
 1. Stage changes
 2. Commit with conventional commit format

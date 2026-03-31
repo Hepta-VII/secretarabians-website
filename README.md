@@ -11,16 +11,16 @@ npm run dev        # http://localhost:3000
 
 ## Scripts
 
-| Command            | Description                          |
-| ------------------ | ------------------------------------ |
-| `npm run dev`      | Start dev server (Turbopack)         |
-| `npm run build`    | Production build (static export)     |
-| `npm run lint`     | ESLint                               |
-| `npm run typecheck`| TypeScript type checking             |
-| `npm run format`   | Prettier formatting                  |
-| `npm run test`     | Run tests                            |
-| `npm run commit`   | Commitizen conventional commit       |
-| `npm run clean`    | Clear build artifacts                |
+| Command             | Description                      |
+| ------------------- | -------------------------------- |
+| `npm run dev`       | Start dev server (Turbopack)     |
+| `npm run build`     | Production build (static export) |
+| `npm run lint`      | ESLint                           |
+| `npm run typecheck` | TypeScript type checking         |
+| `npm run format`    | Prettier formatting              |
+| `npm run test`      | Run tests                        |
+| `npm run commit`    | Commitizen conventional commit   |
+| `npm run clean`     | Clear build artifacts            |
 
 ## Tech Stack
 
