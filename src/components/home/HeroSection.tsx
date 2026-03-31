@@ -15,7 +15,17 @@ export function HeroSection() {
         priority
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/40 to-transparent" />
+      {/* Decorative oval arc at bottom */}
+      <div className="absolute bottom-0 left-0 z-10 w-full">
+        <svg
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          className="block h-[60px] w-full md:h-[80px] lg:h-[120px]"
+        >
+          <ellipse cx="720" cy="120" rx="900" ry="120" className="fill-sa-sand" />
+        </svg>
+      </div>
       <div className="absolute start-6 bottom-24 max-w-[752px] px-2 py-3 md:start-10 lg:start-[29px] lg:bottom-[213px]">
         <p className="text-sa-sand font-serif text-4xl leading-[1.2] lg:text-[64px]">
           {t("hero.welcome")}
