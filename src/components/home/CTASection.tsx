@@ -8,7 +8,7 @@ export function CTASection() {
   const t = useTranslations("home");
 
   return (
-    <section className="bg-sa-rose relative min-h-[300px] overflow-hidden px-6 py-12 md:px-10 lg:h-[350px] lg:px-[160px] lg:py-8">
+    <section className="bg-sa-rose relative min-h-[300px] overflow-x-clip px-6 py-12 md:px-10 lg:h-[350px] lg:px-[160px] lg:py-8">
       <div className="pointer-events-none absolute start-[137px] top-[-130px] hidden -scale-y-100 rotate-180 lg:block">
         <Image
           src="/images/cta-horse.png"
